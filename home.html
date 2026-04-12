@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== -->
+    <!-- VIEW: HOME            -->
+    <!-- ===================== -->
+    <div id="view-home" class="view-section active">
+        <!-- Top Header -->
+        <header class="app-header home-header">
+            <div class="header-container" style="justify-content: space-between;">
+                <div class="brand">
+                    <img src="logo.png" alt="Logo" class="site-logo">
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Welcome Section -->
+        <div class="welcome-container">
+            <h2>Welcome Back</h2>
+            <p>Quality Guarantee</p>
+        </div>
+
+        <!-- Hero Image -->
+        <img src="hero.png" alt="Mini Games Banner" class="hero-banner">
+
+        <!-- Games Product Grid -->
+        <main class="product-grid">
+            <div class="product-card" id="btn-tictactoe">
+                <img src="tictactoe.png" alt="Tic Tac Toe">
+                <div class="product-info"><h3 class="product-title">Tic Tac Toe</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="ludo.png" alt="Ludo">
+                <div class="product-info"><h3 class="product-title">Ludo Multiplayer</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="snakes.png" alt="Snakes and Ladders">
+                <div class="product-info"><h3 class="product-title">Snakes & Ladders</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="carrom.png" alt="Carrom">
+                <div class="product-info"><h3 class="product-title">Carrom Pro</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="cricket.png" alt="Hand Cricket">
+                <div class="product-info"><h3 class="product-title">Hand Cricket</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="chess.png" alt="Chess">
+                <div class="product-info"><h3 class="product-title">Chess Masters</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="checkers.png" alt="Checkers">
+                <div class="product-info"><h3 class="product-title">Classic Checkers</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="dominoes.png" alt="Dominoes">
+                <div class="product-info"><h3 class="product-title">Dominoes Crash</h3></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================== -->
+    <!-- VIEW: SEARCH          -->
+    <!-- ===================== -->
+    <div id="view-search" class="view-section">
+        <header class="search-header">
+            <div class="search-bar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="game-search-input" placeholder="Search for games">
+            </div>
+        </header>
+        <main class="product-grid">
+            <div class="product-card">
+                <img src="tictactoe.png" alt="Tic Tac Toe">
+                <div class="product-info"><h3 class="product-title">Tic Tac Toe</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="ludo.png" alt="Ludo">
+                <div class="product-info"><h3 class="product-title">Ludo Multiplayer</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="snakes.png" alt="Snakes and Ladders">
+                <div class="product-info"><h3 class="product-title">Snakes & Ladders</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="carrom.png" alt="Carrom">
+                <div class="product-info"><h3 class="product-title">Carrom Pro</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="cricket.png" alt="Hand Cricket">
+                <div class="product-info"><h3 class="product-title">Hand Cricket</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="chess.png" alt="Chess">
+                <div class="product-info"><h3 class="product-title">Chess Masters</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="checkers.png" alt="Checkers">
+                <div class="product-info"><h3 class="product-title">Classic Checkers</h3></div>
+            </div>
+            <div class="product-card">
+                <img src="dominoes.png" alt="Dominoes">
+                <div class="product-info"><h3 class="product-title">Dominoes Crash</h3></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================== -->
+    <!-- VIEW: PROFILE         -->
+    <!-- ===================== -->
+    <div id="view-profile" class="view-section">
+        <header class="app-header home-header">
+            <div class="header-container" style="justify-content: center;">
+                <h2>My Account</h2>
+            </div>
+        </header>
+        <div style="padding: 40px 20px; text-align: center;">
+            <div style="width: 100px; height: 100px; background: #ddd; border-radius: 50%; margin: 0 auto 20px; display:flex; align-items:center; justify-content:center;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            <h3 style="font-size:22px; color:#333; margin-bottom: 10px;">Player One</h3>
+            <p style="color:#777; margin-bottom: 30px;">Level 12 • Games Played: 45</p>
+            
+            <button class="btn-login" style="width:100%" onclick="window.location.href='index.html'">Logout</button>
+        </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- VIEW: TIC TAC TOE     -->
+    <!-- ===================== -->
+    <div id="view-game" class="view-section">
+        <header class="app-header home-header">
+            <div class="header-container" style="justify-content: space-between;">
+                <div class="brand" onclick="switchTab('home')" style="cursor:pointer;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <h1>Back</h1>
+                </div>
+                <h2>Tic Tac Toe</h2>
+                <div style="width:30px;"></div>
+            </div>
+        </header>
+        <div class="game-container">
+            <div id="game-status">Player X's Turn</div>
+            <div class="board" id="board">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+            </div>
+            <div>
+                <button class="game-btn" onclick="resetGame()">Reset Board</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- BOTTOM NAVIGATION     -->
+    <!-- ===================== -->
+    <nav class="mobile-nav" id="bottom-nav">
+       <div class="nav-item active" id="tab-home" onclick="switchTab('home')" style="cursor:pointer;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" id="tab-search" onclick="switchTab('search')" style="cursor:pointer;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"></path>
+                <path d="M21 12H16v5h5v-5z"></path>
+            </svg>
+            <span>Search</span>
+        </div>
+        <div class="nav-item" id="tab-profile" onclick="switchTab('profile')" style="cursor:pointer;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>My</span>
+        </div>
+    </nav>
+
+    <!-- Fake Loader for non-playable games -->
+    <div id="fake-loader">
+        <div class="spinner"></div>
+        <h3>Loading game...</h3>
+    </div>
+
+    <!-- ===================== -->
+    <!-- LOGIC SCRIPTS         -->
+    <!-- ===================== -->
+    <script>
+        // SPA TAB SWITCHING
+        function switchTab(tabName) {
+            // Hide all views
+            document.querySelectorAll('.view-section').forEach(view => {
+                view.classList.remove('active');
+            });
+            // Untoggle all tab buttons
+            document.querySelectorAll('.nav-item').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected view
+            document.getElementById('view-' + tabName).classList.add('active');
+            
+            // If it's a main tab, toggle its bottom nav icon. If it's the game view, hide the bottom nav entirely!
+            if(tabName === 'game') {
+                document.getElementById('bottom-nav').style.display = 'none';
+            } else {
+                document.getElementById('bottom-nav').style.display = 'flex';
+                document.getElementById('tab-' + tabName).classList.add('active');
+            }
+        }
+
+        // FAKE LOADER FOR NON-PLAYABLE GAMES
+        document.querySelectorAll('.product-card').forEach(card => {
+            // Don't apply to Tic Tac Toe
+            if(card.id !== 'btn-tictactoe' && card.querySelector('.product-title').innerText !== 'Tic Tac Toe') {
+                card.addEventListener('click', () => {
+                    document.getElementById('fake-loader').style.display = 'flex';
+                });
+            }
+        });
+
+        // LAUNCH TIC TAC TOE
+        document.getElementById('btn-tictactoe').addEventListener('click', () => {
+            switchTab('game');
+            resetGame();
+        });
+        // Also attach to the search page Tic Tac Toe clone
+        const searchCards = document.querySelectorAll('#view-search .product-card');
+        if(searchCards.length > 0) {
+            searchCards[0].addEventListener('click', () => {
+                switchTab('game');
+                resetGame();
+            });
+        }
+
+        // --- TIC TAC TOE ENGINE ---
+        let boardState = ["", "", "", "", "", "", "", "", ""];
+        let currentPlayer = "X";
+        let gameActive = true;
+        const statusDisplay = document.getElementById('game-status');
+        const winningConditions = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8], // horizontal
+            [0, 3, 6], [1, 4, 7], [2, 5, 8], // vertical
+            [0, 4, 8], [2, 4, 6]             // diagonal
+        ];
+
+        function makeMove(cellIndex) {
+            if (boardState[cellIndex] !== "" || !gameActive) return;
+
+            boardState[cellIndex] = currentPlayer;
+            
+            const cellElement = document.querySelectorAll('.cell')[cellIndex];
+            cellElement.innerText = currentPlayer;
+            cellElement.classList.add(currentPlayer.toLowerCase());
+
+            checkWin();
+        }
+
+        function checkWin() {
+            let roundWon = false;
+            for (let i = 0; i <= 7; i++) {
+                const winCondition = winningConditions[i];
+                let a = boardState[winCondition[0]];
+                let b = boardState[winCondition[1]];
+                let c = boardState[winCondition[2]];
+                if (a === "" || b === "" || c === "") continue;
+                if (a === b && b === c) {
+                    roundWon = true;
+                    break;
+                }
+            }
+
+            if (roundWon) {
+                statusDisplay.innerText = `Player ${currentPlayer} Wins!`;
+                gameActive = false;
+                return;
+            }
+
+            let roundDraw = !boardState.includes("");
+            if (roundDraw) {
+                statusDisplay.innerText = "Game ended in a draw!";
+                gameActive = false;
+                return;
+            }
+
+            currentPlayer = currentPlayer === "X" ? "O" : "X";
+            statusDisplay.innerText = `Player ${currentPlayer}'s Turn`;
+        }
+
+        function resetGame() {
+            boardState = ["", "", "", "", "", "", "", "", ""];
+            currentPlayer = "X";
+            gameActive = true;
+            statusDisplay.innerText = `Player X's Turn`;
+            document.querySelectorAll('.cell').forEach(cell => {
+                cell.innerText = "";
+                cell.classList.remove('x', 'o');
+            });
+        }
+
+        // GAMES SEARCH FILTERING
+        const searchInput = document.getElementById('game-search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const term = e.target.value.toLowerCase();
+                const searchViewCards = document.querySelectorAll('#view-search .product-card');
+                searchViewCards.forEach(card => {
+                    const title = card.querySelector('.product-title').innerText.toLowerCase();
+                    if(title.includes(term)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
