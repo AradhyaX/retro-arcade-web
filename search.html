@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Search Header -->
+    <header class="search-header">
+        <div class="search-bar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" placeholder="Search for games">
+        </div>
+    </header>
+
+    <!-- Games Product Grid -->
+    <main class="product-grid" style="flex-grow:1; align-content: flex-start;">
+        <div class="product-card">
+            <img src="ludo.png" alt="Ludo">
+            <div class="product-info">
+                <h3 class="product-title">Ludo Online Multiplayer</h3>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="snakes.png" alt="Snakes and Ladders">
+            <div class="product-info">
+                <h3 class="product-title">Snakes and Ladders Classic</h3>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="carrom.png" alt="Carrom">
+            <div class="product-info">
+                <h3 class="product-title">Carrom Board Pro 3D</h3>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="cricket.png" alt="Hand Cricket">
+            <div class="product-info">
+                <h3 class="product-title">Retro Hand Cricket Match</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+       <a href="home.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="search.html" class="nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"></path>
+                <path d="M21 12H16v5h5v-5z"></path>
+            </svg>
+            <span>Search</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>My</span>
+        </a>
+    </nav>
+
+    <!-- Fake Loader -->
+    <div id="fake-loader">
+        <div class="spinner"></div>
+        <h3>Loading game...</h3>
+    </div>
+
+    <script>
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const loader = document.getElementById('fake-loader');
+                loader.style.display = 'flex';
+            });
+        });
+    </script>
+</body>
+</html>
