@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand">
+                <a href="index.html" class="back-button" style="text-decoration:none; color:inherit;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </a>
+                <img src="logo.png" alt="Logo" class="site-logo">
+                <h1>Register</h1>
+            </div>
+
+            <!-- Desktop Navigation (hidden on mobile) -->
+            <nav class="desktop-nav">
+                <a href="#" class="nav-item"><span>Home</span></a>
+                <a href="#" class="nav-item"><span>Search</span></a>
+                <a href="#" class="nav-item active"><span>My Account</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area centered -->
+    <div class="main-wrapper">
+        <main class="login-card">
+            <div class="input-group">
+                <div class="input-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <!-- ID attached for JS script -->
+                <input type="text" placeholder="Desired Phone Number" id="reg-phone">
+            </div>
+
+            <div class="input-group">
+                <div class="input-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="9" r="6"></circle>
+                        <line x1="13.5" y1="13.5" x2="20" y2="20"></line>
+                        <line x1="16" y1="16" x2="18" y2="14"></line>
+                        <line x1="18.5" y1="18.5" x2="20.5" y2="16.5"></line>
+                    </svg>
+                </div>
+                <!-- ID attached for JS script -->
+                <input type="password" placeholder="Create Password" id="reg-password">
+            </div>
+
+            <button class="btn-login" id="btn-register">Create Account</button>
+
+            <div class="action-buttons">
+                <!-- Redirects back to login -->
+                <a href="index.html" class="btn-secondary" style="text-decoration:none; display:flex; align-items:center; justify-content:center;">Login Instead</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Bottom Navigation (hidden on desktop) -->
+    <nav class="mobile-nav">
+       <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"></path>
+                <path d="M21 12H16v5h5v-5z"></path>
+            </svg>
+            <span>Search</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>My</span>
+        </a>
+    </nav>
+
+    <!-- Frontend logic connecting to backend register API -->
+    <script>
+        document.getElementById('btn-register').addEventListener('click', async () => {
+            const phoneInput = document.getElementById('reg-phone').value;
+            const passwordInput = document.getElementById('reg-password').value;
+
+            try {
+                // Sending POST request to our local Node backend on /api/register
+                const response = await fetch('http://localhost:3000/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ phone: phoneInput, password: passwordInput })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert('✅ ' + data.message + '\nYou can now login with these details!');
+                    // Redirect user back to the login page immediately upon success!
+                    window.location.href = 'index.html';
+                } else {
+                    alert('❌ Registration Failed: ' + data.message);
+                }
+            } catch (error) {
+                alert('⚠️ Error connecting to server. Is the backend running?');
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>
